@@ -13,6 +13,7 @@ const customized = ref(false)
 const updatedAt = ref<string | null>(null)
 
 const form = ref<any>({})
+const toast = useToast()
 
 if (import.meta.client) {
   token.value = localStorage.getItem(TOKEN_KEY)
@@ -35,6 +36,7 @@ async function doLogin() {
   }
   catch (e: any) {
     error.value = e?.data?.message || 'Login gagal — periksa password lalu coba lagi.'
+    toast.add({ title: 'Login gagal', description: error.value, color: 'error', icon: 'i-lucide-alert-circle' })
   }
   finally {
     loading.value = false
@@ -113,9 +115,11 @@ async function save() {
     // sinkronkan tampilan form dengan yang tersimpan
     await loadData()
     ok.value = 'Tersimpan! Buka halaman utama untuk melihat hasilnya.'
+    toast.add({ title: 'Perubahan tersimpan', description: 'Buka halaman utama untuk melihat hasilnya.', color: 'success', icon: 'i-lucide-check-circle-2' })
   }
   catch (e: any) {
     error.value = e?.data?.message || 'Gagal menyimpan — coba lagi.'
+    toast.add({ title: 'Gagal menyimpan', description: error.value, color: 'error', icon: 'i-lucide-alert-circle' })
   }
   finally {
     saving.value = false
@@ -129,9 +133,11 @@ async function resetAll() {
     await $fetch('/api/admin/reset', { method: 'POST', headers: authHeaders() })
     await loadData()
     ok.value = 'Sudah kembali ke bawaan.'
+    toast.add({ title: 'Dikembalikan ke bawaan', description: 'Semua kustomisasi dihapus.', color: 'success', icon: 'i-lucide-rotate-ccw' })
   }
   catch (e: any) {
     error.value = e?.data?.message || 'Gagal reset.'
+    toast.add({ title: 'Gagal reset', description: error.value, color: 'error', icon: 'i-lucide-alert-circle' })
   }
 }
 
@@ -170,9 +176,11 @@ async function uploadGalleryPhoto(i: number, ev: Event) {
     const res: any = await $fetch('/api/admin/upload', { method: 'POST', headers: authHeaders(), body: fd })
     form.value.gallery.items[i].src = res.url
     ok.value = `Foto terupload. Jangan lupa klik “Simpan Perubahan”.`
+    toast.add({ title: 'Foto terupload', description: 'Jangan lupa klik “Simpan Perubahan”.', color: 'success', icon: 'i-lucide-image-check' })
   }
   catch (e: any) {
     error.value = e?.data?.message || 'Upload gagal — maksimal 4MB (jpg/png/webp).'
+    toast.add({ title: 'Upload gagal', description: error.value, color: 'error', icon: 'i-lucide-alert-circle' })
   }
   finally {
     input.value = ''
