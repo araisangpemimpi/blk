@@ -1,0 +1,78 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-neutral-900 antialiased;
+  font-family: var(--font-sans);
+}
+
+.dark { color-scheme: dark; }
+
+/* ————— Palet warna dinamis (diatur dari /admin → data-palette) —————
+   Utility emerald-* Tailwind & komponen `primary` Nuxt UI semuanya
+   merujuk var(--color-emerald-*), jadi menimpa variabelnya mewarnai
+   ulang seluruh web dalam satu mekanisme. Aksen amber tidak diubah. */
+[data-palette="teal"] {
+  --color-emerald-50: #f0fdfa; --color-emerald-100: #ccfbf1;
+  --color-emerald-200: #99f6e4; --color-emerald-300: #5eead4;
+  --color-emerald-400: #2dd4bf; --color-emerald-500: #14b8a6;
+  --color-emerald-600: #0d9488; --color-emerald-700: #0f766e;
+  --color-emerald-800: #115e59; --color-emerald-900: #134e4a;
+  --color-emerald-950: #042f2e;
+}
+[data-palette="blue"] {
+  --color-emerald-50: #eff6ff; --color-emerald-100: #dbeafe;
+  --color-emerald-200: #bfdbfe; --color-emerald-300: #93c5fd;
+  --color-emerald-400: #60a5fa; --color-emerald-500: #3b82f6;
+  --color-emerald-600: #2563eb; --color-emerald-700: #1d4ed8;
+  --color-emerald-800: #1e40af; --color-emerald-900: #1e3a8a;
+  --color-emerald-950: #172554;
+}
+[data-palette="violet"] {
+  --color-emerald-50: #f5f3ff; --color-emerald-100: #ede9fe;
+  --color-emerald-200: #ddd6fe; --color-emerald-300: #c4b8fd;
+  --color-emerald-400: #a78bfa; --color-emerald-500: #8b5cf6;
+  --color-emerald-600: #7c3aed; --color-emerald-700: #6d28d9;
+  --color-emerald-800: #5b21b6; --color-emerald-900: #4c1d95;
+  --color-emerald-950: #2e1065;
+}
+
+/* Marquee animasi untuk mobile-first */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 22s linear infinite;
+}
+
+/* Scroll snap helper */
+.snap-row {
+  scroll-snap-type: x mandatory;
+}
+.snap-row > * {
+  scroll-snap-align: start;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Pattern islami halus untuk hero */
+.pattern-grid {
+  background-image: radial-gradient(circle at 1px 1px, rgb(255 255 255 / 0.22) 1px, transparent 0);
+  background-size: 22px 22px;
+}

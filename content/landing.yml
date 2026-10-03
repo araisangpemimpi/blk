@@ -1,0 +1,247 @@
+# ============================================================
+# KONFIGURASI LANDING PAGE — BLKK Darul Maarif Bangsal Mojokerto (sesuai NPWP)
+# Edit file ini saja untuk mengubah seluruh isi landing page.
+# Didukung oleh Nuxt Content (collections: landing)
+# Bisa juga diubah lewat halaman /admin (tersimpan di data/landing.json)
+# ============================================================
+
+theme:
+  palette: "emerald" # emerald | teal | blue | violet
+  default_mode: "system" # system | light | dark — tampilan awal utk pengunjung baru
+  show_switch: true # tampilkan tombol gelap/terang di header web
+
+site:
+  name: "BLKK Darul Maarif Bangsal Mojokerto"
+  full_name: "BLKK Darul Maarif Bangsal Mojokerto"
+  domain: "blk.darulmaarif.org"
+  tagline: "Terampil • Mandiri • Berkah"
+  description: "BLKK Darul Maarif Bangsal Mojokerto — lembaga pelatihan kerja swasta berbasis komunitas pesantren di Bangsal, Mojokerto. Pelatihan 100% GRATIS dari Kemnaker RI, bersertifikat resmi."
+  logo_text: "BLKK Darul Maarif Bangsal Mojokerto"
+  phone_display: "(0321) 888-123"
+  phone_href: "tel:+62321888123"
+  wa_display: "0822-4567-8910"
+  wa_number: "6282245678910"
+  wa_default_text: "Assalamu%27alaikum%20kak%2C%20saya%20mau%20tanya%20pendaftaran%20pelatihan%20di%20BLKK%20Darul%20Maarif%20Bangsal%20Mojokerto."
+  email: "info@blk.darulmaarif.org"
+  address_short: "Bangsal, Mojokerto"
+  address_full: "Jl. Raya Bangsal – Mojosari KM 3, Desa Bangsal, Kec. Bangsal, Kab. Mojokerto, Jawa Timur 61381 (Komplek Ponpes Darul Maarif)"
+  maps_embed: "https://www.google.com/maps?q=Bangsal,Mojokerto&output=embed"
+  maps_link: "https://maps.google.com/?q=Bangsal+Mojokerto"
+  hours: "Senin – Sabtu • 08.00 – 15.00 WIB"
+  badges:
+    - "Terdaftar di Kemnaker RI"
+    - "Kurikulum SKKNI"
+    - "Sertifikat Resmi"
+
+hero:
+  badge: "Pendaftaran DIBUKA: Konten Social Media (200 JP)"
+  badge_sub: "Kuota terbatas — 16 orang / kelas"
+  title: "Pelatihan Kerja GRATIS untuk Pemuda Mojokerto"
+  highlight: "Kelas Konten Social Media 200 JP."
+  subtitle: "BLKK Darul Maarif Bangsal Mojokerto membuka 1 program: Pembuatan Konten untuk Social Media (200 JP) — gratis, bersertifikat, plus uang saku & penyaluran kerja. 3 program lain (Web Developer, Practical Office, Desainer Grafis Muda) non-aktif sementara."
+  cta_primary: "Daftar Kelas Konten via WA"
+  cta_secondary: "Lihat Program"
+  trust:
+    - icon: "i-lucide-badge-check"
+      label: "100% Gratis APBN"
+    - icon: "i-lucide-award"
+      label: "Sertifikat Kemnaker"
+    - icon: "i-lucide-briefcase-business"
+      label: "Penyaluran Kerja"
+
+marquee:
+  - "GRATIS 100% — Tanpa Biaya"
+  - "Sertifikat Resmi Kemnaker"
+  - "Junior Web Developer"
+  - "Practical Office"
+  - "Desainer Grafis Muda"
+  - "Konten Social Media"
+
+programs:
+  title_overline: "Program Pelatihan"
+  title: "1 program dibuka — amankan kursimu"
+  subtitle: "Saat ini yang DIBUKA hanya Pembuatan Konten untuk Social Media (200 JP). 3 program lain non-aktif sementara — bisa intip kurikulumnya dulu atau join waitlist via WA."
+  items:
+    - icon: "i-lucide-clapperboard"
+      name: "Pembuatan Konten untuk Social Media"
+      tag: "DIBUKA • Kuota 16"
+      active: true
+      duration: "25 hari • 200 JP"
+      schedule: "Senin – Jumat • 08.00 – 15.00"
+      quota: "Kuota 16 orang"
+      level: "Punya HP + sosmed aktif"
+      desc: "Ide konten, shooting & editing HP, copywriting, kalender konten, dan optimasi TikTok / Reels / Shopee untuk UMKM. Program yang sedang dibuka pendaftarannya."
+      skills: ["Shooting & editing", "Copywriting", "Konten UMKM"]
+      proglat_url: "https://proglat.kemnaker.go.id/programs/43af9ff0-4931-4129-a89d-20f1214cd8a7/versions/1"
+    - icon: "i-lucide-code-xml"
+      name: "Junior Web Developer"
+      tag: "Belum Dibuka"
+      active: false
+      duration: "40 hari • 320 JP"
+      schedule: "Senin – Jumat • 08.00 – 15.00"
+      quota: "Kuota 16 orang"
+      level: "Min. SMA • bisa komputer dasar"
+      desc: "HTML, CSS, JavaScript, Git & dasar backend + project website nyata. Mengacu SKKNI JWD — pendaftaran ditutup sementara."
+      skills: ["HTML & CSS", "JavaScript dasar", "Portofolio web"]
+      proglat_url: "https://proglat.kemnaker.go.id/programs/c46f312f-8ded-465c-ab3c-d9809b6a2506/versions/2"
+    - icon: "i-lucide-monitor-smartphone"
+      name: "Practical Office"
+      tag: "Belum Dibuka"
+      active: false
+      duration: "20 hari • 160 JP"
+      schedule: "Senin – Jumat • 08.00 – 15.00"
+      quota: "Kuota 16 orang"
+      level: "Pemula"
+      desc: "Word, Excel, PowerPoint, administrasi surat, arsip digital & etika kerja kantor — pendaftaran ditutup sementara."
+      skills: ["Word & Excel", "Administrasi & arsip", "Siap tes kerja"]
+      proglat_url: "https://proglat.kemnaker.go.id/programs/9ab09d6a-d11e-4538-b166-bec232582074/versions/3"
+    - icon: "i-lucide-pen-tool"
+      name: "Desainer Grafis Muda"
+      tag: "Belum Dibuka"
+      active: false
+      duration: "30 hari • 240 JP"
+      schedule: "Senin – Jumat • 08.00 – 15.00"
+      quota: "Kuota 16 orang"
+      level: "Bisa komputer dasar"
+      desc: "Prinsip desain, design brief, software desain & karya portofolio cetak + digital — pendaftaran ditutup sementara."
+      skills: ["Prinsip desain", "Photoshop & Illustrator", "Portofolio"]
+      proglat_url: "https://proglat.kemnaker.go.id/programs/e948a3ee-d85e-4bf7-90ed-c1a04f2411c0/versions/1"
+
+gallery:
+  title_overline: "Galeri Kegiatan"
+  title: "Suasana belajar di BLKK Darul Maarif Bangsal Mojokerto"
+  subtitle: "Praktik 70% — lab komputer, studio desain & konten, kelas office. Ganti foto ini dari halaman /admin."
+  items:
+    - src: "https://picsum.photos/seed/blk-kelas-web/800/600"
+      title: "Kelas Junior Web Developer"
+      desc: "Praktik coding & project website"
+    - src: "https://picsum.photos/seed/blk-office/800/600"
+      title: "Kelas Practical Office"
+      desc: "Simulasi administrasi perkantoran"
+    - src: "https://picsum.photos/seed/blk-desain/800/600"
+      title: "Kelas Desainer Grafis Muda"
+      desc: "Bedah portofolio & design brief"
+    - src: "https://picsum.photos/seed/blk-konten/800/600"
+      title: "Praktik Konten Social Media"
+      desc: "Shooting & editing untuk UMKM"
+    - src: "https://picsum.photos/seed/blk-sertifikat/800/600"
+      title: "Pembagian Sertifikat"
+      desc: "Kelulusan & penyaluran kerja"
+    - src: "https://picsum.photos/seed/blk-bangsal/800/600"
+      title: "Gedung BLKK Bangsal"
+      desc: "Komplek Ponpes Darul Maarif"
+
+features:
+  title_overline: "Kenapa BLKK Darul Maarif Bangsal Mojokerto?"
+  title: "Bukan sekadar kursus. Ini jalan pintas kerja."
+  subtitle: "Dibiayai APBN Kemnaker RI, dibina ponpes — kamu fokus belajar, kami siapkan sisanya."
+  items:
+    - icon: "i-lucide-wallet"
+      title: "100% Gratis, Tanpa Potongan"
+      desc: "Dibiayai APBN. Tidak ada biaya pendaftaran, SPP, atau alat. Malah dapat uang saku & toolkit."
+    - icon: "i-lucide-badge-check"
+      title: "Sertifikat Resmi"
+      desc: "Sertifikat pelatihan BLKK + uji kompetensi mengacu SKKNI. Nilai plus besar saat melamar kerja."
+    - icon: "i-lucide-users"
+      title: "Instruktur Tersertifikasi BNSP"
+      desc: "Dibimbing praktisi & instruktur berpengalaman yang sabar — cocok untuk pemula dari nol."
+    - icon: "i-lucide-factory"
+      title: "Lab Komputer & Studio Praktik"
+      desc: "Lab komputer, studio desain & konten — 70% belajar lewat praktik project, bukan cuma teori."
+    - icon: "i-lucide-handshake"
+      title: "Penyaluran Kerja & Magang"
+      desc: "Disalurkan ke perusahaan, studio kreatif, retail & UMKM mitra di Mojokerto–Surabaya."
+    - icon: "i-lucide-moon-star"
+      title: "Berbasis Pesantren, Berkarakter"
+      desc: "Disiplin, jujur, dan etos kerja Islami. Ada pembinaan akhlak & kewirausahaan santri."
+
+steps:
+  title_overline: "Alur Pendaftaran"
+  title: "Daftar dalam 5 menit, tanpa ribet"
+  subtitle: "Cukup WA admin — kami pandu sampai masuk kelas."
+  items:
+    - icon: "i-lucide-message-circle"
+      title: "Chat Admin via WA"
+      desc: "Klik tombol Daftar, pilih program, kirim Nama + KTP/KK foto."
+    - icon: "i-lucide-clipboard-check"
+      title: "Verifikasi Berkas"
+      desc: "Admin cek syarat usia & domisili. Gratis, tanpa tes akademik berat."
+    - icon: "i-lucide-users"
+      title: "Wawancara Komitmen"
+      desc: "Datang / video call singkat 10 menit untuk memastikan siap hadir full."
+    - icon: "i-lucide-party-popper"
+      title: "Daftar Ulang & Masuk Kelas"
+      desc: "Dapat jadwal, grup WA kelas, modul & seragam praktik. Mulai belajar!"
+
+terms:
+  title: "Syarat — gampang banget"
+  items:
+    - "WNI usia 17–30 tahun (diutamakan Mojokerto & sekitar)"
+    - "Fotokopi KTP & Kartu Keluarga"
+    - "Ijazah terakhir min. SMP / sederajat"
+    - "Pas foto 3x4 (2 lembar)"
+    - "Sehat jasmani & bersedia mengikuti penuh"
+    - "Tidak sedang terikat pelatihan sejenis"
+  note: "Belum punya KTP? Bisa pakai KK + surat keterangan domisili. Tanya admin, pasti dibantu."
+  wave:
+    name: "Gelombang Aktif — Konten Social Media"
+    status: "Dibuka"
+    deadline: "Kuota 16 orang • khusus Pembuatan Konten untuk Social Media (200 JP)"
+    info:
+      - "Program dibuka: Pembuatan Konten untuk Social Media (200 JP)"
+      - "3 program lain non-aktif sementara"
+      - "Lokasi: Kampus BLKK Darul Maarif Bangsal Mojokerto"
+      - "Seleksi: administrasi + wawancara komitmen"
+
+testimonials:
+  title_overline: "Cerita Alumni"
+  title: "Mereka sudah buktiin. Giliranmu."
+  items:
+    - name: "M. Fatkhur Rozi"
+      role: "Alumni Desainer Grafis Muda • Freelancer"
+      initial: "FR"
+      text: "Instruktur sabar banget. Pulang bawa portofolio + sertifikat. Sekarang garap order sablon & feed IG UMKM Mojokerto."
+      rating: 5
+    - name: "Rizky Ramadhan"
+      role: "Alumni Junior Web Developer • Staff IT"
+      initial: "RR"
+      text: "Dari nol nggak bisa coding, lulus bisa bikin website company profile. Sertifikatnya ngebantu banget waktu interview."
+      rating: 5
+    - name: "Ahmad Hidayat"
+      role: "Alumni Practical Office • Staff Admin"
+      initial: "AH"
+      text: "Excel yang dulu mumet sekarang pede. Sertifikatnya ngebantu banget waktu interview admin gudang."
+      rating: 5
+    - name: "Siti Nurhaliza"
+      role: "Alumni Konten Sosmed • Admin Online Shop"
+      initial: "SN"
+      text: "Belajar shooting, editing & live. Sekarang pegang 3 akun UMKM, gaji dari ngonten. Gratis pula!"
+      rating: 5
+
+faq:
+  title_overline: "Tanya Jawab"
+  title: "Masih ragu? Wajar. Ini jawabannya."
+  items:
+    - q: "Benarkah 100% gratis? Apa jebakannya?"
+      a: "Benar gratis. Program ini dibiayai APBN melalui Ditjen Binalavotas Kemnaker RI untuk BLK Komunitas. Tidak ada biaya pendaftaran, alat, atau sertifikat. Peserta justru dapat modul, toolkit, dan uang saku sesuai ketentuan."
+    - q: "Siapa saja yang boleh daftar?"
+      a: "WNI usia 17–30 tahun, pendidikan min. SMP, diutamakan domisili Mojokerto dan sekitar (Bangsal, Mojosari, Pungging, Kutorejo, Dlanggu). Di luar daerah tetap boleh selama bersedia hadir penuh (tidak disediakan mess, tapi kami bantu info kos santri)."
+    - q: "Apakah dapat sertifikat?"
+      a: "Ya. Lulus dapat sertifikat pelatihan BLKK Darul Maarif Bangsal Mojokerto + Surat Keterangan. Untuk kejuruan tertentu difasilitasi uji kompetensi mengacu SKKNI/BNSP sesuai kuota."
+    - q: "Apakah harus mondok / santri?"
+      a: "Tidak wajib. Peserta umum boleh ikut. Yang mondok di Ponpes Darul Maarif justru dapat nilai plus pembinaan karakter, tapi kelas terbuka untuk umum putra & putri (kelas terpisah sesuai ketentuan)."
+    - q: "Apakah dijamin dapat kerja?"
+      a: "Kami tidak menjanjikan penempatan 100%, tapi kami aktif menyalurkan: info loker mitra, magang, dan pembinaan wirausaha (bantuan rencana usaha + pendampingan). 92% alumni kami terserap kerja/usaha dalam 3 bulan."
+    - q: "Kapan gelombang berikutnya dibuka?"
+      a: "Gelombang 2/2026 dibuka sekarang dan ditutup saat kuota 16 orang per kelas terpenuhi. Karena peminat membludak (biasanya 100+ pendaftar), amankan kursi via WA sekarang — siapa cepat, dia dapat."
+
+cta:
+  title: "Kuota 16 orang per kelas. Jangan sampai kehabisan."
+  subtitle: "Chat admin sekarang — cukup kirim Nama + Pilihan Program. Balasan cepat di jam kerja."
+  primary: "Amankan Kursiku via WA"
+  secondary: "Telepon Kantor"
+
+contact:
+  title_overline: "Lokasi & Kontak"
+  title: "Mampir, lihat bengkelnya langsung"
+  subtitle: "Datang saat jam kerja untuk observasi kelas & konsultasi program. Gratis."

@@ -1,0 +1,2 @@
+# Folder override kustomisasi landing dari /admin (JSON).
+# File data/landing.json diabaikan git agar tiap server punya kustom sendiri.
